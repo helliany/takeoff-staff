@@ -1,0 +1,52 @@
+.header {
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  min-width: 320px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #112f26;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.link {
+  position: relative;
+  padding: 5px;
+  color: #cbf8ec;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 2px;
+    width: 0;
+    background-color: #cbf8ec;
+    transition: .2s all ease-in-out;
+  }
+
+  &:hover, &:focus {
+    &:after {
+      width: 100%;
+    }
+  }
+}
+
+.homeLink {
+  margin-right: auto;
+}
+
+.active {
+  &:after {
+    width: 100%;
+  }
+}
