@@ -1,26 +1,27 @@
 import * as axios from "axios";
 
 const instance = axios.create({
-  // baseURL: 'url',
+  baseURL: 'http://localhost:3000',
 });
 
 export const authAPI = {
-  login(username, password) {
-    return instance.post('url', { username, password })
+  signup(email, password) {
+    return instance.post('/signup', { email, password })
       .catch((error) => {
         console.warn('Error :(');
       });
   },
-  logout() {
-    return instance.delete(`url`);
+  login(email, password) {
+    return instance.post('/login', { email, password })
+      .catch((error) => {
+        console.warn('Error :(');
+      });
   }
 }
 
 export const contactsAPI = {
   getContacts() {
-    return instance.get('url', {
-      headers: {Authorization: `Token ${localStorage.getItem('token')}`}
-    })
+    return instance.get('/contacts')
       .then(response => {
         return response.data;
       })
@@ -28,5 +29,11 @@ export const contactsAPI = {
         console.warn(error);
         localStorage.removeItem('token');
       });
+  },
+  deleteContact(userId) {
+    return instance.delete(`/contacts/${userId}`)
+  },
+  addContact({name, phone, email, company, address}) {
+    return instance.post(`/contacts`, { name, phone, email, address })
   }
 }

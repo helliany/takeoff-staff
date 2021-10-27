@@ -1,14 +1,29 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
+import {useDispatch, useSelector} from "react-redux";
+import {logout} from "../../redux/authReducer";
+import {Box} from "@material-ui/core";
 import classes from "./Header.module.scss";
+import {ReactComponent as LogoutIcon} from "../../assets/images/logout-icon.svg";
 
 const Header = () => {
+  const dispatch = useDispatch();
+  const isAuth = useSelector(state => state.auth.isAuth);
+
   return (
     <header className={classes.header}>
       <nav className={classes.nav}>
-        <NavLink className={`${classes.link} ${classes.homeLink}`} activeClassName={classes.active} to={"/"}  exact>
-          Home
-        </NavLink>
+        <Box className={classes.linkWrapper}>
+          <NavLink className={classes.link} activeClassName={classes.active} to={"/"}  exact>
+            Home
+          </NavLink>
+          {isAuth && (
+            <button className={`${classes.link} ${classes.button}`} onClick={() => dispatch(logout())}>
+              <LogoutIcon className={classes.buttonIcon} />
+              <span>Logout</span>
+            </button>
+          )}
+        </Box>
         <NavLink className={classes.link} activeClassName={classes.active} to={"/contacts"}>
           Contacts
         </NavLink>

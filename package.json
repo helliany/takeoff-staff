@@ -8,6 +8,8 @@
     "@testing-library/user-event": "^12.1.10",
     "final-form": "^4.20.4",
     "gh-pages": "^3.2.3",
+    "json-server": "^0.17.0",
+    "json-server-auth": "^2.1.0",
     "lodash": "^4.17.21",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

@@ -5,19 +5,21 @@
   min-width: 320px;
   padding: 20px;
   box-sizing: border-box;
-  background-color: #112f26;
+  background-color: #1D1E18;
 }
 
 .nav {
   display: flex;
   justify-content: center;
   gap: 20px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .link {
   position: relative;
-  padding: 5px;
-  color: #cbf8ec;
+  padding: 10px 20px;
+  color: #B9F5D8;
   font-size: 18px;
   font-weight: 700;
   text-decoration: none;
@@ -26,27 +28,43 @@
   &:after {
     content: "";
     position: absolute;
-    left: 0;
-    bottom: -5px;
-    height: 2px;
+    left: 50%;
+    bottom: 0;
+    height: 3px;
     width: 0;
-    background-color: #cbf8ec;
+    background-color: #B9F5D8;
+    transform: translateX(-50%);
     transition: .2s all ease-in-out;
   }
 
   &:hover, &:focus {
     &:after {
-      width: 100%;
+      width: 20px;
     }
   }
 }
 
-.homeLink {
+.linkWrapper {
+  display: flex;
   margin-right: auto;
 }
 
 .active {
   &:after {
-    width: 100%;
+    width: 20px;
   }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.buttonIcon {
+  width: 16px;
+  margin-right: 6px;
+  fill: #B9F5D8;
 }

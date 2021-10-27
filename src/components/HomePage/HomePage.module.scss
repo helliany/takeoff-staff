@@ -1,0 +1,13 @@
+.image {
+  display: block;
+  max-height: 400px;
+  border-radius: 10px;
+}
+
+.link {
+  display: inline-block;
+  transition: .2s all ease-in-out;
+  &:hover, &:focus {
+    opacity: .8;
+  }
+}

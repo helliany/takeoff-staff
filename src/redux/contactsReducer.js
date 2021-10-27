@@ -18,9 +18,16 @@ const contactsReducer = (state = initialState, action) => {
 
 export const setContacts = (contacts) => ({type: SET_CONTACTS, contacts})
 
-export const requestContacts = () => async (dispatch) => {
+export const getContacts = () => async (dispatch) => {
   const data = await contactsAPI.getContacts();
   dispatch(setContacts(data));
 }
+
+export const deleteContact = (id) => async (dispatch) => {
+  await contactsAPI.deleteContact(id);
+  const data = await contactsAPI.getContacts();
+  dispatch(setContacts(data));
+}
+
 
 export default contactsReducer;

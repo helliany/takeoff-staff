@@ -1,14 +1,15 @@
 import React from "react";
 import { Form, Field } from "react-final-form";
 import { Box, Button, Grid, TextField } from "@material-ui/core";
-import {useDispatch} from "react-redux";
-import {login} from "../../../redux/authReducer";
+import {useDispatch, useSelector} from "react-redux";
+import {login, signup} from "../../../redux/authReducer";
 
 const LoginForm = () => {
   const dispatch = useDispatch();
+  const isAuth = useSelector(state => state.auth.isAuth);
 
   const onSubmit = async (values) => {
-    dispatch(login(values.username, values.password))
+    isAuth ? dispatch(login(values.email, values.password)) : dispatch(signup(values.email, values.password))
   };
 
   const required = (value) => (value ? undefined : "Required");
@@ -25,10 +26,10 @@ const LoginForm = () => {
         <form onSubmit={handleSubmit}>
           <Grid container direction="column" spacing={3}>
             <Grid item>
-              <Field name="username" validate={composeValidators(required, minValue(8))}>
+              <Field name="email" validate={composeValidators(required, minValue(8))}>
                 {({input, meta}) => (
                   <>
-                    <TextField {...input} label="Name" variant="outlined" />
+                    <TextField {...input} label="Email" variant="outlined" />
                     {meta.error && meta.touched && (
                       <Box color="error.main">{meta.error}</Box>
                     )}
