@@ -12,7 +12,7 @@ function App() {
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <Provider store={store}>
-        <Box display="flex" flexDirection="column" height="100vh">
+        <Box display="flex" flexDirection="column" minHeight="100vh">
           <Header />
           <Switch>
             <Route exact path="/"><HomePage /></Route>

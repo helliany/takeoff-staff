@@ -8,7 +8,7 @@ import {ReactComponent as ArrowUpIcon} from "../../assets/images/up-arrow-icon.s
 import {ReactComponent as ArrowDownIcon} from "../../assets/images/down-arrow-icon.svg";
 import {ReactComponent as SearchIcon} from "../../assets/images/magnifier-icon.svg";
 import classes from "./ContactsPage.module.scss";
-import ContactForm from "./ContactForm/ContactForm";
+import ContactModal from "./ContactModal/ContactModal";
 
 const ContactsPage = () => {
   const isAuth = useSelector((state) => state.auth.isAuth)
@@ -68,7 +68,7 @@ const ContactsPage = () => {
             <TextField className={classes.input} fullWidth label="Search" variant="outlined" onChange={handleSearch} value={searchedValue} />
           </Box>
           <Box mb={2}>
-            <ContactForm />
+            <ContactModal />
           </Box>
           {contactsData.length !== 0 ? (
             <TableContainer component={Paper}>

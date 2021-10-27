@@ -33,7 +33,7 @@ export const contactsAPI = {
   deleteContact(userId) {
     return instance.delete(`/contacts/${userId}`)
   },
-  addContact({name, phone, email, company, address}) {
+  addContact({name, phone, email, address}) {
     return instance.post(`/contacts`, { name, phone, email, address })
   }
 }

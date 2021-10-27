@@ -36,6 +36,7 @@
       "name": "tim",
       "phone": "12345678",
       "email": "test@test1.com",
+      "company": "YURTURE",
       "address": "Name Street, 25",
       "id": 1
     },
@@ -43,6 +44,7 @@
       "name": "Tom",
       "phone": "87423618",
       "email": "test@test2.com",
+      "company": "STRed",
       "address": "Another Street, 25",
       "id": 2
     },
@@ -50,6 +52,7 @@
       "name": "Alice",
       "phone": "41345131",
       "email": "test@test3.com",
+      "company": "STRed",
       "address": "Another One Street, 25",
       "id": 3
     },
@@ -57,6 +60,7 @@
       "name": "Alice",
       "phone": "41345131",
       "email": "test@test3.com",
+      "company": "STRed",
       "address": "Another One Street, 25",
       "id": 4
     },
@@ -64,8 +68,30 @@
       "name": "Alice",
       "phone": "41345131",
       "email": "test@test3.com",
+      "company": "STRed",
       "address": "Another One Street, 25",
       "id": 5
+    },
+    {
+      "name": "tewtwet",
+      "phone": "4214124124",
+      "email": "test@test241.com",
+      "address": "4124124efew",
+      "id": 6
+    },
+    {
+      "name": "tewtwet",
+      "phone": "4214124124",
+      "email": "test@test241.com",
+      "address": "4124124efew",
+      "id": 7
+    },
+    {
+      "name": "rewr",
+      "phone": "rewrwe",
+      "email": "rewrew@f",
+      "address": "rewrewrwer",
+      "id": 8
     }
   ]
 }
