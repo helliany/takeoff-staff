@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/takeoff-staff/static/css/main.9da46d60.chunk.css",
-    "main.js": "/takeoff-staff/static/js/main.3e6b7ccf.chunk.js",
-    "main.js.map": "/takeoff-staff/static/js/main.3e6b7ccf.chunk.js.map",
+    "main.css": "/takeoff-staff/static/css/main.e320b11f.chunk.css",
+    "main.js": "/takeoff-staff/static/js/main.0bea3987.chunk.js",
+    "main.js.map": "/takeoff-staff/static/js/main.0bea3987.chunk.js.map",
     "runtime-main.js": "/takeoff-staff/static/js/runtime-main.702af65c.js",
     "runtime-main.js.map": "/takeoff-staff/static/js/runtime-main.702af65c.js.map",
-    "static/js/2.c580619f.chunk.js": "/takeoff-staff/static/js/2.c580619f.chunk.js",
-    "static/js/2.c580619f.chunk.js.map": "/takeoff-staff/static/js/2.c580619f.chunk.js.map",
+    "static/js/2.dc603747.chunk.js": "/takeoff-staff/static/js/2.dc603747.chunk.js",
+    "static/js/2.dc603747.chunk.js.map": "/takeoff-staff/static/js/2.dc603747.chunk.js.map",
     "index.html": "/takeoff-staff/index.html",
-    "static/css/main.9da46d60.chunk.css.map": "/takeoff-staff/static/css/main.9da46d60.chunk.css.map",
-    "static/js/2.c580619f.chunk.js.LICENSE.txt": "/takeoff-staff/static/js/2.c580619f.chunk.js.LICENSE.txt",
+    "static/css/main.e320b11f.chunk.css.map": "/takeoff-staff/static/css/main.e320b11f.chunk.css.map",
+    "static/js/2.dc603747.chunk.js.LICENSE.txt": "/takeoff-staff/static/js/2.dc603747.chunk.js.LICENSE.txt",
     "static/media/delete-icon.e61f2f81.svg": "/takeoff-staff/static/media/delete-icon.e61f2f81.svg",
     "static/media/down-arrow-icon.083a8ad1.svg": "/takeoff-staff/static/media/down-arrow-icon.083a8ad1.svg",
     "static/media/edit-icon.130860b6.svg": "/takeoff-staff/static/media/edit-icon.130860b6.svg",
@@ -23,8 +23,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.702af65c.js",
-    "static/js/2.c580619f.chunk.js",
-    "static/css/main.9da46d60.chunk.css",
-    "static/js/main.3e6b7ccf.chunk.js"
+    "static/js/2.dc603747.chunk.js",
+    "static/css/main.e320b11f.chunk.css",
+    "static/js/main.0bea3987.chunk.js"
   ]
 }
