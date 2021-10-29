@@ -1,5 +1,6 @@
 {
   "name": "takeoff-staff",
+  "homepage": "https://helliany.github.io/takeoff-staff",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
