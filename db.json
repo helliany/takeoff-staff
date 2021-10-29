@@ -1,11 +1,10 @@
 {
-  "users": [
-  ],
+  "users": [],
   "contacts": [
     {
       "name": "tim",
       "phone": "12345678",
-      "email": "test@test1.com4",
+      "email": "test@test1.com",
       "company": "YURTURE",
       "address": "Street, 25",
       "id": 1

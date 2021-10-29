@@ -13,7 +13,7 @@ const Contact = ({id, user, onDelete}) => {
   const [phone, setPhone] = useState(user.phone);
   const [email, setEmail] = useState(user.email);
   const [address, setAddress] = useState(user.address);
-  const [errorMessage, setErrorMessage] = useState('');
+  const [isError, setIsError] = useState(false);
   const dispatch = useDispatch();
 
   const handleEditMode = () => {
@@ -25,12 +25,17 @@ const Contact = ({id, user, onDelete}) => {
       try {
         await dispatch(updateContact({id, name, phone, email, address}));
         setEditMode(false);
+        setIsError(false);
       } catch(err) {
-        setErrorMessage('Something Went Wrong');
+        setIsError(true);
       }
     };
 
     fetchData();
+
+    return () => {
+      setIsError(false);
+    };
   }
 
   return (
@@ -79,9 +84,9 @@ const Contact = ({id, user, onDelete}) => {
           <DeleteIcon width={16} height={16} fill="#f15c5c" />
         </IconButton>
       </TableCell>
-      {errorMessage ? (
+      {isError ? (
         <TableCell className={classes.error}>
-          {errorMessage}
+          Something Went Wrong:(
         </TableCell>
       ) : null}
     </>

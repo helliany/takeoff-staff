@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Form, Field } from "react-final-form";
 import { Box, Button, Grid, TextField } from "@material-ui/core";
 import {useDispatch} from "react-redux";
@@ -7,10 +7,24 @@ import {minLength, required} from "../../../utils/validators";
 
 const ContactForm = ({onCloseModal}) => {
   const dispatch = useDispatch();
+  const [isError, setIsError] = useState(false);
 
   const onSubmit = async (values) => {
-    await dispatch(addContact(values));
-    onCloseModal();
+    const fetchData = async () => {
+      try {
+        await dispatch(addContact(values));
+        setIsError(false);
+        onCloseModal();
+      } catch(err) {
+        setIsError(true);
+      }
+    };
+
+    fetchData();
+
+    return () => {
+      setIsError(false);
+    };
   };
 
   const composeValidators = (...validators) => (value) =>
@@ -70,6 +84,11 @@ const ContactForm = ({onCloseModal}) => {
                 )}
               </Field>
             </Grid>
+            {isError && (
+              <Grid item>
+                <Box color="error.main">Something Went Wrong:(</Box>
+              </Grid>
+            )}
             <Grid item>
               <Button
                 variant="contained"
