@@ -2,7 +2,7 @@
 
 ## Available Scripts
 
-In the project directory, you can run:
+To test all functionality in the project directory you can run:
 
 ### `yarn install`
 Installs all dependencies
@@ -12,5 +12,5 @@ Installs all dependencies
 Runs the app.\
 Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
 
-The page will reload if you make edits.
-
+###
+Also GitHub Pages deploy available: [https://helliany.github.io/takeoff-staff/](https://helliany.github.io/takeoff-staff/) (read only)
