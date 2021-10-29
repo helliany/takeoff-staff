@@ -1,11 +1,13 @@
 import React from "react";
 import {Box} from "@material-ui/core";
-import {connect} from "react-redux";
+import {useSelector} from "react-redux";
 import {Link, Redirect} from "react-router-dom";
 import HomeImage from "../../assets/images/home.jfif";
 import classes from "./HomePage.module.scss";
 
-const HomePage = ({isAuth}) => {
+const HomePage = () => {
+  const isAuth = useSelector((state) => state.auth.isAuth)
+
   return (
     <>
       {!isAuth ? (
@@ -22,8 +24,4 @@ const HomePage = ({isAuth}) => {
   )
 }
 
-const mapStateToProps = (state) => ({
-  isAuth: state.auth.isAuth
-})
-
-export default connect(mapStateToProps, null)(HomePage);
+export default HomePage;

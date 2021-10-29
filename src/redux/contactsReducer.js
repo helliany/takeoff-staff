@@ -35,4 +35,10 @@ export const addContact = (values) => async (dispatch) => {
   dispatch(setContacts(data));
 }
 
+export const updateContact = (values) => async (dispatch) => {
+  await contactsAPI.updateContact(values);
+  const data = await contactsAPI.getContacts();
+  dispatch(setContacts(data));
+}
+
 export default contactsReducer;

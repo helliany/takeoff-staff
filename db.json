@@ -2,51 +2,18 @@
   "users": [
     {
       "email": "test@test.com",
-      "password": "$2a$10$hlrB0gSuuZddlUFmQrWa/O8s9rqV./WCPN09hvHagHoysNjFa/gWW",
+      "password": "$2a$10$pmTlV8sowna8DX7xlYnlF.Gfl8R6J740ZjHXFEyzrRKhhDYMuSy.a",
       "id": 1
-    },
-    {
-      "email": "test@test.com2",
-      "password": "$2a$10$JTrGfMibt8JYc9sh.zsQxeVGIrR2aO6H64RMLhDI48M5WIh2T6GTy",
-      "id": 2
-    },
-    {
-      "email": "test@fsfasfa",
-      "password": "$2a$10$7/i65EI2YoBD/rcN1QPPGO505jJedZxTb.S5qfSQjxRz2rOEfrXIe",
-      "id": 3
-    },
-    {
-      "email": "rewtwe@fse.mail",
-      "password": "$2a$10$MkeVnMQHBJNZWeLHeJQd6.sIYPXEoemcnzGI3NSoJFkrrngRK/Au2",
-      "id": 4
-    },
-    {
-      "email": "test@test.com4",
-      "password": "$2a$10$K.7IOCb16BBOQFzGRG49NuJ4PHRhcsnRov780IPsMgo5sDjKWE5wy",
-      "id": 5
-    },
-    {
-      "email": "test@maril.com",
-      "password": "$2a$10$Fi2Ab1Bmbi5tiesf2DjNFuEMDhNesFfWHxG5EqXnz.w8B1SKQ/Mma",
-      "id": 6
     }
   ],
   "contacts": [
     {
-      "name": "tim",
+      "name": "tim4",
       "phone": "12345678",
-      "email": "test@test1.com",
+      "email": "test@test1.com4",
       "company": "YURTURE",
-      "address": "Name Street, 25",
+      "address": "Street, 25",
       "id": 1
-    },
-    {
-      "name": "Tom",
-      "phone": "87423618",
-      "email": "test@test2.com",
-      "company": "STRed",
-      "address": "Another Street, 25",
-      "id": 2
     },
     {
       "name": "Alice",
@@ -71,20 +38,6 @@
       "company": "STRed",
       "address": "Another One Street, 25",
       "id": 5
-    },
-    {
-      "name": "tewtwet",
-      "phone": "4214124124",
-      "email": "test@test241.com",
-      "address": "4124124efew",
-      "id": 6
-    },
-    {
-      "name": "tewtwet",
-      "phone": "4214124124",
-      "email": "test@test241.com",
-      "address": "4124124efew",
-      "id": 7
     },
     {
       "name": "rewr",
@@ -92,6 +45,27 @@
       "email": "rewrew@f",
       "address": "rewrewrwer",
       "id": 8
+    },
+    {
+      "name": "rqwr",
+      "phone": "r",
+      "email": "rwqrwqr@h",
+      "address": "rwqr",
+      "id": 9
+    },
+    {
+      "name": "ewt",
+      "phone": "twet",
+      "email": "tewt@f",
+      "address": "tewt",
+      "id": 10
+    },
+    {
+      "name": "test",
+      "phone": "4214214",
+      "email": "test@test3.com",
+      "address": "Test Address",
+      "id": 11
     }
   ]
 }

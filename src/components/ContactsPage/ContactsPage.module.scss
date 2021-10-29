@@ -1,3 +1,9 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
 .input {
   background-color: #ffffff;
 }
@@ -11,5 +17,9 @@
   font-size: 24px;
   color: #1D1E18;
   fill: #1D1E18;
+}
+
+.table {
+  position: relative;
 }
 

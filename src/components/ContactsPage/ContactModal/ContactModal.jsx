@@ -10,13 +10,13 @@ const ContactModal = () => {
 
   return (
     <div>
-      <Button onClick={handleOpen}>Add Contact</Button>
+      <Button variant="contained" color="primary" onClick={handleOpen}>Add Contact</Button>
       <Modal
         open={open}
         onClose={handleClose}
       >
         <Box className={classes.modal}>
-          <Box mb={2} textAlign="center" fontSize={24}>
+          <Box variant="contained" color="primary" mb={2} textAlign="center" fontSize={24}>
             Add Contact
           </Box>
           <ContactForm onCloseModal={handleClose} />

@@ -7,15 +7,9 @@ const instance = axios.create({
 export const authAPI = {
   signup(email, password) {
     return instance.post('/signup', { email, password })
-      .catch((error) => {
-        console.warn('Error :(');
-      });
   },
   login(email, password) {
     return instance.post('/login', { email, password })
-      .catch((error) => {
-        console.warn('Error :(');
-      });
   }
 }
 
@@ -25,15 +19,14 @@ export const contactsAPI = {
       .then(response => {
         return response.data;
       })
-      .catch((error) => {
-        console.warn(error);
-        localStorage.removeItem('token');
-      });
   },
   deleteContact(userId) {
     return instance.delete(`/contacts/${userId}`)
   },
   addContact({name, phone, email, address}) {
     return instance.post(`/contacts`, { name, phone, email, address })
+  },
+  updateContact({id, name, phone, email, address}) {
+    return instance.patch(`/contacts/${id}`, { name, phone, email, address })
   }
 }

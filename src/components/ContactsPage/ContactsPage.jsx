@@ -9,6 +9,8 @@ import {ReactComponent as ArrowDownIcon} from "../../assets/images/down-arrow-ic
 import {ReactComponent as SearchIcon} from "../../assets/images/magnifier-icon.svg";
 import classes from "./ContactsPage.module.scss";
 import ContactModal from "./ContactModal/ContactModal";
+import Loader from "../Loader/Loader";
+import Error from "../Error/Error";
 
 const ContactsPage = () => {
   const isAuth = useSelector((state) => state.auth.isAuth)
@@ -19,10 +21,28 @@ const ContactsPage = () => {
   const [searchedValue, setSearchedValue] = useState('');
   const [ascSorting, setAscSorting] = useState(false);
   const [descSorting, setDescSorting] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   useEffect(() => {
-    dispatch(getContacts());
-  }, []);
+    const fetchData = async () => {
+      try {
+        setIsLoading(true);
+        await dispatch(getContacts());
+        setIsError(false);
+      } catch(err) {
+        setIsError(true);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchData();
+
+    return () => {
+      setIsError(false);
+    };
+  }, [dispatch]);
 
   useEffect(() => {
     setContactsData(contacts);
@@ -61,8 +81,10 @@ const ContactsPage = () => {
   }
 
   return (
-    <Box p={4} height="100%">
-      {isAuth ? (
+    <Box p={4} className={classes.wrapper}>
+      {isAuth && isLoading && !isError && <Loader />}
+      {isAuth && !isLoading && isError && <Error />}
+      {isAuth && !isLoading && !isError && (
         <>
           <Box mb={2}>
             <TextField className={classes.input} fullWidth label="Search" variant="outlined" onChange={handleSearch} value={searchedValue} />
@@ -72,13 +94,13 @@ const ContactsPage = () => {
           </Box>
           {contactsData.length !== 0 ? (
             <TableContainer component={Paper}>
-              <Table>
+              <Table className={classes.table}>
                 {contactsData && (
                   <>
                     <TableHead>
                       <TableRow>
                         <TableCell>
-                          <Grid container alignItems="center" spacing={1}>
+                          <Grid container wrap="nowrap" alignItems="center" spacing={1}>
                             <Grid item>Name</Grid>
                             <Grid item>
                               <IconButton size="small" onClick={handleDescSort} className={descSorting ? classes.active : ''}>
@@ -94,15 +116,16 @@ const ContactsPage = () => {
                         </TableCell>
                         <TableCell>Phone</TableCell>
                         <TableCell>Email</TableCell>
-                        <TableCell>Company</TableCell>
                         <TableCell>Address</TableCell>
+                        <TableCell></TableCell>
+                        <TableCell></TableCell>
                       </TableRow>
                     </TableHead>
                     <TableBody>
                       {contactsData.map((contact) => {
                         return (
                           <TableRow key={contact.id}>
-                            <Contact user={contact} onDelete={() => handleDelete(contact.id)} />
+                            <Contact id={contact.id} user={contact} onDelete={() => handleDelete(contact.id)} />
                           </TableRow>
                         )
                       })}
@@ -118,9 +141,8 @@ const ContactsPage = () => {
             </Grid>
           )}
         </>
-      ) : (
-        <Redirect to={"/login"} />
       )}
+      {!isAuth && <Redirect to={"/login"} />}
     </Box>
   )
 }
