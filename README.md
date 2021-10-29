@@ -17,4 +17,4 @@ Also GitHub Pages deploy available: [https://helliany.github.io/takeoff-staff/](
 
 ###
 
-##### Available: registration, authorization; creating, editing and deleting contacts
+#### Available: registration, authorization; create, edit, search, filter by name and delete contacts
