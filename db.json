@@ -2,7 +2,7 @@
   "users": [],
   "contacts": [
     {
-      "name": "tim",
+      "name": "Tim",
       "phone": "12345678",
       "email": "test@test1.com",
       "company": "YURTURE",
@@ -34,32 +34,18 @@
       "id": 5
     },
     {
-      "name": "rewr",
-      "phone": "rewrwe",
-      "email": "rewrew@f",
-      "address": "rewrewrwer",
-      "id": 8
-    },
-    {
-      "name": "rqwr",
-      "phone": "r",
-      "email": "rwqrwqr@h",
-      "address": "rwqr",
-      "id": 9
-    },
-    {
-      "name": "ewt",
-      "phone": "twet",
-      "email": "tewt@f",
-      "address": "tewt",
-      "id": 10
-    },
-    {
-      "name": "test",
+      "name": "Sam",
       "phone": "4214214",
       "email": "test@test3.com",
       "address": "Test Address",
       "id": 11
+    },
+    {
+      "name": "Tom",
+      "phone": "235235235",
+      "email": "test@test.com",
+      "address": "Tom Street, 43",
+      "id": 12
     }
   ]
 }
