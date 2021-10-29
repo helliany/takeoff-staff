@@ -1,22 +1,19 @@
 import React, {useState} from "react";
 import { Form, Field } from "react-final-form";
 import { Box, Button, Grid, TextField } from "@material-ui/core";
-import {useDispatch, useSelector} from "react-redux";
-import {login, signup} from "../../../redux/authReducer";
+import {useDispatch} from "react-redux";
+import {login} from "../../../redux/authReducer";
 import {minLength, required} from "../../../utils/validators";
-import classes from "./LoginForm.module.scss";
+import classes from "./SignInForm.module.scss";
 
-const LoginForm = () => {
+const SignInForm = () => {
   const dispatch = useDispatch();
-  const isSignedUp = useSelector((state) => state.auth.isSignedUp)
   const [errorMessage, setErrorMessage] = useState();
 
   const onSubmit = async (values) => {
     const fetchData = async () => {
       try {
-        isSignedUp ?
-          await dispatch(login(values.email, values.password))
-          : await dispatch(signup(values.email, values.password))
+        await dispatch(login(values.email, values.password))
       } catch(err) {
         if (err.response && err.response.data) {
           setErrorMessage(err.response.data);
@@ -85,4 +82,4 @@ const LoginForm = () => {
   )
 }
 
-export default LoginForm;
+export default SignInForm;

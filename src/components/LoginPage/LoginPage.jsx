@@ -1,10 +1,11 @@
 import React from "react";
 import {Box, Button, Grid} from "@material-ui/core";
-import LoginForm from "./LoginForm/LoginForm";
 import {useDispatch, useSelector} from "react-redux";
 import {Redirect} from "react-router-dom";
 import classes from "./LoginPage.module.scss";
 import {setSignedUpUser} from "../../redux/authReducer";
+import SignInForm from "./SignInForm/SignInForm";
+import SignUpForm from "./SignUpForm/SignUpForm";
 
 const Login = () => {
   const isAuth = useSelector(state => state.auth.isAuth);
@@ -13,6 +14,10 @@ const Login = () => {
 
   const handleSignUp = () => {
     dispatch(setSignedUpUser(false));
+  }
+
+  const handleSignIn = () => {
+    dispatch(setSignedUpUser(true));
   }
 
   return (
@@ -25,10 +30,16 @@ const Login = () => {
             ) : (
               <Box component="h2">Sign Up</Box>
             )}
-            <Box mb={2}>
-              <LoginForm />
-            </Box>
-            {isSignedUp && <Button onClick={handleSignUp}>or You Can Sign Up</Button>}
+            {isSignedUp ? (
+              <Box mb={2}><SignInForm /></Box>
+            ) : (
+              <Box mb={2}><SignUpForm /></Box>
+            )}
+            {isSignedUp ? (
+              <Button onClick={handleSignUp}>or You Can Sign Up</Button>
+            ) : (
+              <Button onClick={handleSignIn}>already registered? sign in</Button>
+            )}
           </Grid>
         </Box>
       ) : (
