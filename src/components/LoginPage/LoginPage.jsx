@@ -31,9 +31,9 @@ const Login = () => {
               <Box component="h2">Sign Up</Box>
             )}
             {isSignedUp ? (
-              <Box mb={2}><SignInForm /></Box>
+              <Box className={classes.wrapper} mb={2}><SignInForm /></Box>
             ) : (
-              <Box mb={2}><SignUpForm /></Box>
+              <Box className={classes.wrapper} mb={2}><SignUpForm /></Box>
             )}
             {isSignedUp ? (
               <Button onClick={handleSignUp}>or You Can Sign Up</Button>

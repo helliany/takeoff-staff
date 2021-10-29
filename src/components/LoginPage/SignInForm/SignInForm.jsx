@@ -31,7 +31,7 @@ const SignInForm = () => {
     <Form
       onSubmit={onSubmit}
       render={({ handleSubmit, invalid }) => (
-        <form className={classes.form} onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
           <Grid container direction="column" spacing={3}>
             <Grid item>
               <Field name="email" validate={composeValidators(required, minLength(3))}>
