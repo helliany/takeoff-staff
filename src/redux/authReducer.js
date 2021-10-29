@@ -4,7 +4,7 @@ const SET_USER = 'SET_USER';
 const SET_SIGNED_UP_USER = 'SET_SIGNED_UP_USER';
 
 let initialState = {
-  isAuth: localStorage.getItem('token'),
+  isAuth: localStorage.getItem('logintoken'),
   isSignedUp: localStorage.getItem('token'),
 };
 
@@ -39,6 +39,7 @@ export const signup = (username, password) => async (dispatch) => {
     dispatch(setAuthUser(true));
     dispatch(setSignedUpUser(true));
     localStorage.setItem('token', response.data.accessToken);
+    localStorage.setItem('logintoken', response.data.accessToken);
   }
 }
 
@@ -46,12 +47,13 @@ export const login = (username, password) => async (dispatch) => {
   const response = await authAPI.login(username, password);
   if (response && response.status === 200) {
     dispatch(setAuthUser(true));
-    localStorage.setItem('token', response.data.accessToken);
+    localStorage.setItem('logintoken', response.data.accessToken);
   }
 }
 
 export const logout = () => async (dispatch) => {
   dispatch(setAuthUser(false));
+  localStorage.removeItem('logintoken');
 }
 
 export default authReducer;

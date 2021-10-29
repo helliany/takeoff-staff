@@ -1,20 +1,5 @@
 {
   "users": [
-    {
-      "email": "test@test.com",
-      "password": "$2a$10$pmTlV8sowna8DX7xlYnlF.Gfl8R6J740ZjHXFEyzrRKhhDYMuSy.a",
-      "id": 1
-    },
-    {
-      "email": "test@test.comr",
-      "password": "$2a$10$vgm8HIb2rK8Kc9Apq9XreuBowB2tvnSWANQajVfF6rimFh3m6F3PG",
-      "id": 2
-    },
-    {
-      "email": "test@test6.com",
-      "password": "$2a$10$QKjZ4skQD/y/HjDOdYfq8./vY9co/LvEtZDXu8D26IH5FjUQtoAB2",
-      "id": 3
-    }
   ],
   "contacts": [
     {
