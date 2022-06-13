@@ -1,7 +1,7 @@
 import React from "react";
 import {Box, Button, Grid} from "@material-ui/core";
 import {useDispatch, useSelector} from "react-redux";
-import {Redirect} from "react-router-dom";
+import {Navigate} from "react-router-dom";
 import classes from "./LoginPage.module.scss";
 import {setSignedUpUser} from "../../redux/authReducer";
 import SignInForm from "./SignInForm/SignInForm";
@@ -43,7 +43,7 @@ const Login = () => {
           </Grid>
         </Box>
       ) : (
-        <Redirect to={"/contacts"} />
+        <Navigate replace to="/contacts" />
       )}
     </>
   )

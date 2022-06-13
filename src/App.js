@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import {Provider} from "react-redux";
 import store from "./redux/reduxStore";
 import Header from "./components/Header/Header";
@@ -14,12 +14,12 @@ function App() {
       <Provider store={store}>
         <Box display="flex" flexDirection="column" minHeight="100vh">
           <Header />
-          <Switch>
-            <Route exact path="/"><HomePage /></Route>
-            <Route exact path="/contacts"><ContactsPage /></Route>
-            <Route exact path="/login"><LoginPage /></Route>
-            <Route path="*"><ErrorPage /></Route>
-          </Switch>
+          <Routes>
+            <Route exact path="/" element={<HomePage />} />
+            <Route exact path="/contacts" element={<ContactsPage />} />
+            <Route exact path="/login" element={<LoginPage />} />
+            <Route path="*" element={<ErrorPage />} />
+          </Routes>
         </Box>
       </Provider>
     </Router>

@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {Box, Grid, IconButton, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField} from "@material-ui/core";
 import {useDispatch, useSelector} from "react-redux";
-import {Redirect} from "react-router-dom";
+import {Navigate} from "react-router-dom";
 import {deleteContact, getContacts} from "../../redux/contactsReducer";
 import Contact from "./Contact/Contact";
 import {ReactComponent as ArrowUpIcon} from "../../assets/images/up-arrow-icon.svg";
@@ -142,7 +142,7 @@ const ContactsPage = () => {
           )}
         </>
       )}
-      {!isAuth && <Redirect to={"/login"} />}
+      {!isAuth && <Navigate replace to="/login" />}
     </Box>
   )
 }
