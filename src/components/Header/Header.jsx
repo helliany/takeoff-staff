@@ -21,7 +21,6 @@ const Header = () => {
                 : classes.link
             }
             to={"/"}
-            exact
           >
             Home
           </NavLink>
