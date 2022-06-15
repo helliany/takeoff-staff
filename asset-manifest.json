@@ -1,30 +1,23 @@
 {
   "files": {
-    "main.css": "/takeoff-staff/static/css/main.e320b11f.chunk.css",
-    "main.js": "/takeoff-staff/static/js/main.0bea3987.chunk.js",
-    "main.js.map": "/takeoff-staff/static/js/main.0bea3987.chunk.js.map",
-    "runtime-main.js": "/takeoff-staff/static/js/runtime-main.702af65c.js",
-    "runtime-main.js.map": "/takeoff-staff/static/js/runtime-main.702af65c.js.map",
-    "static/js/2.dc603747.chunk.js": "/takeoff-staff/static/js/2.dc603747.chunk.js",
-    "static/js/2.dc603747.chunk.js.map": "/takeoff-staff/static/js/2.dc603747.chunk.js.map",
+    "main.css": "/takeoff-staff/static/css/main.2e62e819.css",
+    "main.js": "/takeoff-staff/static/js/main.7fc6b8e8.js",
+    "static/media/home.jfif": "/takeoff-staff/static/media/home.c90b032584c841ca543f.jfif",
+    "static/media/sad-cat.jfif": "/takeoff-staff/static/media/sad-cat.9ec5bdcdbc425d433afd.jfif",
+    "static/media/delete-icon.svg": "/takeoff-staff/static/media/delete-icon.e61f2f81a5e96911f3ff17b06bc0d4c1.svg",
+    "static/media/save-icon.svg": "/takeoff-staff/static/media/save-icon.15ad6cf68100cebb5e4416281be81b1d.svg",
+    "static/media/magnifier-icon.svg": "/takeoff-staff/static/media/magnifier-icon.ad40acfbc659058a76f1c8dabcb90e54.svg",
+    "static/media/logout-icon.svg": "/takeoff-staff/static/media/logout-icon.b9f2a6d001b9547ee9970905fdc94ece.svg",
+    "static/media/edit-icon.svg": "/takeoff-staff/static/media/edit-icon.130860b6a0a3f25a05d11f08701bdced.svg",
+    "static/media/up-arrow-icon.svg": "/takeoff-staff/static/media/up-arrow-icon.062e55beeb90493d3cfc8a60b586ac7f.svg",
+    "static/media/loader.svg": "/takeoff-staff/static/media/loader.74b7215a0f706daeaa15fce33111aae1.svg",
+    "static/media/down-arrow-icon.svg": "/takeoff-staff/static/media/down-arrow-icon.083a8ad1d048a6cf3b9e343e5f251101.svg",
     "index.html": "/takeoff-staff/index.html",
-    "static/css/main.e320b11f.chunk.css.map": "/takeoff-staff/static/css/main.e320b11f.chunk.css.map",
-    "static/js/2.dc603747.chunk.js.LICENSE.txt": "/takeoff-staff/static/js/2.dc603747.chunk.js.LICENSE.txt",
-    "static/media/delete-icon.e61f2f81.svg": "/takeoff-staff/static/media/delete-icon.e61f2f81.svg",
-    "static/media/down-arrow-icon.083a8ad1.svg": "/takeoff-staff/static/media/down-arrow-icon.083a8ad1.svg",
-    "static/media/edit-icon.130860b6.svg": "/takeoff-staff/static/media/edit-icon.130860b6.svg",
-    "static/media/home.c90b0325.jfif": "/takeoff-staff/static/media/home.c90b0325.jfif",
-    "static/media/loader.74b7215a.svg": "/takeoff-staff/static/media/loader.74b7215a.svg",
-    "static/media/logout-icon.b9f2a6d0.svg": "/takeoff-staff/static/media/logout-icon.b9f2a6d0.svg",
-    "static/media/magnifier-icon.ad40acfb.svg": "/takeoff-staff/static/media/magnifier-icon.ad40acfb.svg",
-    "static/media/sad-cat.9ec5bdcd.jfif": "/takeoff-staff/static/media/sad-cat.9ec5bdcd.jfif",
-    "static/media/save-icon.15ad6cf6.svg": "/takeoff-staff/static/media/save-icon.15ad6cf6.svg",
-    "static/media/up-arrow-icon.062e55be.svg": "/takeoff-staff/static/media/up-arrow-icon.062e55be.svg"
+    "main.2e62e819.css.map": "/takeoff-staff/static/css/main.2e62e819.css.map",
+    "main.7fc6b8e8.js.map": "/takeoff-staff/static/js/main.7fc6b8e8.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.702af65c.js",
-    "static/js/2.dc603747.chunk.js",
-    "static/css/main.e320b11f.chunk.css",
-    "static/js/main.0bea3987.chunk.js"
+    "static/css/main.2e62e819.css",
+    "static/js/main.7fc6b8e8.js"
   ]
 }
